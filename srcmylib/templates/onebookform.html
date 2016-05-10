@@ -1,0 +1,68 @@
+<form>
+    <div class="col-xs-12">
+        <div class="modal-header">
+            <h3 class="modal-title">Добавить книгу</h3>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="modal-body">
+            <!--
+            <ul>
+                <li ng-repeat="item in items">
+                    <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+-->
+            <div class="form-group">
+                <label for="author">Автор</label>
+                <input type="text" class="form-control" id="author" placeholder="Автор" ng-model="oneBook.author">
+            </div>
+            <div class="form-group">
+                <label for="title">Название книги</label>
+                <input type="text" class="form-control" id="title" placeholder="Название книги" ng-model="oneBook.title">
+            </div>
+
+            <div class="form-group">
+                <label for="genreSelect"> Жанр </label>
+                </br>
+                <select class="form-control" id="genreSelect" ng-model="oneBook.genre">
+                    <option ng-repeat="genre in genres" value="{{genre.genre}}">{{genre.genre}}</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="state">Состояние</label>
+                </br>
+                <select class="form-control" id="stateSelect" ng-model="oneBook.state">
+                    <option ng-repeat="state in states" value="{{state.state}}">{{state.state}}</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="publishYear">Год издания</label>
+                <input type="text" class="form-control" id="publishYear" placeholder="Год издания" ng-model="oneBook.publishYear">
+            </div>
+            <div class="form-group">
+                <label for="webDescriptionLink">Ссылка на описание</label>
+                <input type="text" class="form-control" id="webDescriptionLink" placeholder="Ссылка на магазин, описание, ..." ng-model="oneBook.webDescriptionLink">
+            </div>
+            <div class="form-group">
+                <label for="webDownloadLink">Ссылка на закачку</label>
+                <input type="text" class="form-control" id="webDownloadLink" placeholder="Ссылка на закачку" ng-model="oneBook.webDownloadLink">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row" > 
+        <h3>Читаю сейчас</h3>  
+        <div class="col-xs-12">        
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="col-md-2">Название</th>
+                        <th class="col-md-1">Автор</th>
+                        <th class="col-md-1">Когда добавлена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="book in books | filter : {state:'Читаю сейчас'}">
+                        <td>{{book.title}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.addDate | date:'dd.MM.yyyy'}}</td>
+                        <td ng-show="isLogin()">
+                            <button class="btn btn-sm btn-outline" ng-click="setStateReadFinish(book)">Прочитал ?</button>
+                        </td>
+                    </tr>        
+                </tbody>
+            </table>
+        </div>
+    </div>                
+</div>
