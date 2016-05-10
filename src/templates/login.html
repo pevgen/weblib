@@ -1,0 +1,25 @@
+<div class="row row-content">
+    <div class="col-xs-12 col-md-3">
+        <p style="padding:20px;"></p>            
+        <div ng-show="error" class="alert alert-danger">{{error}}</div>
+        <form name="form" ng-submit="login()" role="form">
+            <div class="col-xs-12 col-md-5">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <i class="fa fa-key"></i>
+                <input type="text" name="username" id="username" class="form-control" ng-model="username" required />
+                <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Введите здесь логин(email)</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <i class="fa fa-lock"></i>
+                <input type="password" name="password" id="password" class="form-control" ng-model="password" required />
+                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Введите здесь пароль</span>
+            </div>
+            <div class="form-actions">
+                <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">Войти</button>       
+            </div>
+            </div>
+        </form>
+    </div>
+</div>

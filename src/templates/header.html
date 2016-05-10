@@ -1,0 +1,78 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="app"><img src="images/logo.png" height=30 width=41></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <!-- Home               -->
+                <li><a ui-sref="app">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+                    </a>
+                </li>
+
+                <!-- Люди               -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Люди    <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="app.volonteers">Волонтёры</a></li>
+                        <li><a ui-sref="#">Дети</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a ui-sref="app.administration">Администрация</a></li>
+                    </ul>
+                </li>                
+
+                <!-- Расписание               -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Расписание    <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Школа</a></li>
+                        <li><a href="#">Сопровождение</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Культпоходы</a></li>
+                    </ul>
+                </li>                
+
+                <!-- Волонтёрские мероприятия               -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Волонтёрские мероприятия    <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Встречи</a></li>
+                        <li><a href="#">Лекции</a></li>
+                    </ul>
+                </li>                                
+
+                <!-- Быстрые ссылки              -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Быстрые ссылки     <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Анкеты</a></li>
+                        <li><a href="#">Cтандартные ответы</a></li>
+                    </ul>
+                </li>                                
+                
+                <!-- Home               -->
+                <li><a ui-sref="app.login">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Войти
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>    
+<!--<div ui-view></div>-->

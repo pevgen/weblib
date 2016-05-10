@@ -1,0 +1,29 @@
+{
+  "name": "webTest",
+  "authors": [
+    "pevgen@gmail.com"
+  ],
+  "description": "My first right app",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "angular-resource": "^1.5.0",
+    "angular-bootstrap": "^1.2.4",
+    "angular-smart-table": "^2.1.8",
+    "ng-table": "^0.8.3",
+    "angular-ui-grid": "^3.1.1"
+  }
+}
