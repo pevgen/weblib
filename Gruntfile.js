@@ -89,6 +89,11 @@ module.exports = function(grunt) {
             assetsDirs: ['public', 'public/styles']
         }
     }
+      // deploy to firebase
+   ,
+    exec: {
+       echo_something: 'firebase deploy'
+    }
 //      ,      
 //    watch: {
 //        scripts: {
@@ -110,6 +115,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');   
+  grunt.loadNpmTasks('grunt-exec');
 //  grunt.loadNpmTasks('grunt-contrib-watch');
 // simple build task
    
@@ -123,7 +129,8 @@ module.exports = function(grunt) {
     'concat:generated',
     'cssmin:generated',
     'uglify:generated',
-    'usemin'
+    'usemin',
+    'exec'
 //      ,'watch'  
   ]); 
 };

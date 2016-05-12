@@ -1,30 +1,49 @@
 .row-header {
-  margin: 0px auto;
-  padding: 0px 0px;
+    margin: 0px auto;
+    padding: 0px 0px;
 }
+
 .row-content {
-  margin: 0px auto;
-  padding: 50px 0px;
-  border-bottom: 1px ridge;
-  min-height: 400px;
+    margin: 0px auto;
+    padding: 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
 }
+
 .row-footer {
-  margin: 0px auto;
-  padding: 20px 0px;
-  background-color: #AfAfAf;
+    margin: 0px auto;
+    padding: 10px 0px;
+    background-color: #AfAfAf;
+    height: 170px;
 }
+}
+
 .jumbotron {
-  margin: 0px auto;
-  padding: 70px 30px;
-  background: #7986CB;
-  color: floralwhite;
+    margin: 0px auto;
+    padding: 70px 30px;
+    background: #7986CB;
+    color: floralwhite;
 }
+
 
 /* стреклки для сортировки в smart-table*/
-.st-sort-ascent:before{
-    content: '\25B2';
-  }
 
-  .st-sort-descent:before{
+.st-sort-ascent:before {
+    content: '\25B2';
+}
+
+.st-sort-descent:before {
     content: '\25BC';
-  }
+}
+
+
+/* 
+  Не показывать объект #idLoadData (загрузка ифслгз ldyys[]) для небольших экранов (на телефоне) 
+*/
+
+@media screen and (max-width: 900px) {
+    #idLoadData {
+        /*    font-size: 46px;*/
+        display: none
+    }
+}
