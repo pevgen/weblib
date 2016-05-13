@@ -56,8 +56,13 @@
                     <tr ng-repeat="book in booksDisplayed | filter : {genre:selectedGenre} | filter : {state:stateSelect} ">
                         <!--                    <tr ng-repeat="book in books">-->
                         <td>
-                            <div ng-controller="OneBookController">
-                                <button class="btn btn-link" ng-click="showEditForm(book)">{{book.title}}</button>
+                            <div  ng-show="isLogin()">
+                                <div ng-controller="OneBookController">
+                                    <button class="btn btn-link" ng-click="showEditForm(book)">{{book.title}}</button>
+                                </div>
+                            </div>
+                            <div ng-hide="isLogin()">
+                                {{book.title}}
                             </div>
                         </td>
                         <td>{{book.author}}</td>
@@ -72,13 +77,13 @@
                                     </div>
                                 </div>
 -->
-                                <div class="col-md-6">
+                                <div class="col-md-6" ng-show="isLogin()">
                                     <div ng-controller="ReviewBookController">
                                         <button class="btn btn-sm btn-outline" ng-click="showEditForm(book)">Заметки</button>
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6" ng-show="isLogin()">
                                     <button type="button" ng-click="removeItem(book)" class="btn btn-sm btn-danger">
                                         <i class="glyphicon glyphicon-remove-circle">
                                             </i>
@@ -102,7 +107,7 @@
         </div>
     </div>
     <!--  (row = form) с кнопками   -->
-    <form class="form-horizontal">
+    <form class="form-horizontal" ng-show="isLogin()">
 
 
         <div class="form-group">

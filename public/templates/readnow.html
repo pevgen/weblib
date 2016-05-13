@@ -15,7 +15,7 @@
                         <td>{{book.title}}</td>
                         <td>{{book.author}}</td>
                         <td>{{book.addDate | date:'dd.MM.yyyy'}}</td>
-                        <td>
+                        <td ng-show="isLogin()">
                             <button class="btn btn-sm btn-outline" ng-click="setStateReadFinish(book)">Прочитал ?</button>
                         </td>
                     </tr>        

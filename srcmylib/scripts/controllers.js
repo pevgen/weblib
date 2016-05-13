@@ -7,7 +7,9 @@ angular.module('library')
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 .controller('StatisticController', ['$scope', 'bookService', function ($scope, bookService) {
-    bookService.getBooks().$loaded(function () {
+
+
+    $scope.countStat = function () {
         $scope.allBooksCount = bookService.getBooks().length;
 
         $scope.booksCount2015 = bookService.getBooks().filter(function (obj) {
@@ -17,7 +19,7 @@ angular.module('library')
                 return false;
             }
         }).length;
-        
+
         $scope.booksCount2016 = bookService.getBooks().filter(function (obj) {
             if (obj.readYear === 2016) {
                 return true;
@@ -25,12 +27,20 @@ angular.module('library')
                 return false;
             }
         }).length;
-        
 
+    };
+
+    // Вызывается после первой загрузки массива
+    bookService.getBooks().$loaded($scope.countStat);
+
+
+    // Вызывается при каждом изменении массива
+    bookService.getBooks().$watch(function (event) {
+        console.log(event);
+        $scope.countStat();
     });
 
-
-    }])
+}])
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 //        Контроллер для авторизации
@@ -103,6 +113,8 @@ angular.module('library')
             book.state = LIB_CONFIG.finishedReadingState;
             book.readYear = new Date().getFullYear();
             bookService.updateBook(book);
+            // запускаем событие вверх
+            $scope.$emit('booksEdited', 'Data to send');
         }
     };
 

@@ -30,7 +30,7 @@ angular.module('library', ['ui.router','ngResource','firebase','ui.bootstrap','s
                     
                     'footer': {
                         templateUrl : 'templates/footer.html',
-                        controller  : 'AboutController'
+                        controller  : 'StatisticController'
                     }
                 }
             })
@@ -47,7 +47,7 @@ angular.module('library', ['ui.router','ngResource','firebase','ui.bootstrap','s
                     },
                     'footer': {
                         templateUrl : 'templates/footer.html',
-                        controller  : 'AboutController'
+                        controller  : 'StatisticController'
                     }                    
                 }
             })   
