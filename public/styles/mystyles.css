@@ -1,3 +1,8 @@
+body {
+    background-color: #9BA5C1;
+    color: #1B2C37;
+}
+
 .row-header {
     margin: 0px auto;
     padding: 0px 0px;
@@ -16,7 +21,7 @@
     background-color: #AfAfAf;
     height: 170px;
 }
-}
+
 
 .jumbotron {
     margin: 0px auto;
@@ -25,22 +30,17 @@
     color: floralwhite;
 }
 
-
 /* стреклки для сортировки в smart-table*/
-
 .st-sort-ascent:before {
     content: '\25B2';
 }
-
 .st-sort-descent:before {
     content: '\25BC';
 }
 
-
 /* 
   Не показывать объект #idLoadData (загрузка ифслгз ldyys[]) для небольших экранов (на телефоне) 
 */
-
 @media screen and (max-width: 900px) {
     #idLoadData {
         /*    font-size: 46px;*/

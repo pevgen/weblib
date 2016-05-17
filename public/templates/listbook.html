@@ -9,7 +9,7 @@
                     <label for="stateSelect">Состояние чтения :</label>
                 </div>
                 <div class="col-xs-12 col-md-2">
-                    <select id="stateSelect" ng-model="stateSelect">
+                    <select id="stateSelect" ng-model="stateSelect" st-search="state">
                         <option value="">Все</option>
                         <option value="Не прочитана">Не прочитана</option>
                         <option value="Отложена">Отложена</option>
@@ -40,7 +40,7 @@
             </ul>
 
             <!--            <div class="pre-scrollable">-->
-            <table class="table table-striped">
+            <table class="table">
                 <thead>
                     <tr>
                         <th st-sort="title" class="col-md-2">Название</th>
