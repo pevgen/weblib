@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
   // глобальная переменная    
   var globalConfig = {
-    src: 'srcmylib',
+    src: 'src',
     dest: 'dev'
   };
         
