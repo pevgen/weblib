@@ -31,27 +31,33 @@
                 </select>
             </div>
 
-
-            <div class="form-group">
-                <label for="state">Состояние</label>
-                </br>
-                <select class="form-control" id="stateSelect" ng-model="oneBook.state">
-                    <option ng-repeat="state in states" value="{{state.state}}">{{state.state}}</option>
-                </select>
+            <div>
+                <small><input type="button" class="btn btn-link" data-toggle="collapse" data-target="#additionalElements" value="Дополнительно..."></small>
             </div>
 
+            <div id="additionalElements" class="collapse">
+                <div class="form-group">
+                    <label for="state">Состояние</label>
+                    </br>
+                    <select class="form-control" id="stateSelect" ng-model="oneBook.state">
+                        <option ng-repeat="state in states" value="{{state.state}}">{{state.state}}</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label for="publishYear">Год издания</label>
-                <input type="text" class="form-control" id="publishYear" placeholder="Год издания" ng-model="oneBook.publishYear">
-            </div>
-            <div class="form-group">
-                <label for="webDescriptionLink">Ссылка на описание</label>
-                <input type="text" class="form-control" id="webDescriptionLink" placeholder="Ссылка на магазин, описание, ..." ng-model="oneBook.webDescriptionLink">
-            </div>
-            <div class="form-group">
-                <label for="webDownloadLink">Ссылка на закачку</label>
-                <input type="text" class="form-control" id="webDownloadLink" placeholder="Ссылка на закачку" ng-model="oneBook.webDownloadLink">
+
+                <div class="form-group">
+                    <label for="publishYear">Год издания</label>
+                    <input type="text" class="form-control" id="publishYear" placeholder="Год издания" ng-model="oneBook.publishYear">
+                </div>
+                <div class="form-group">
+                    <label for="webDescriptionLink">Ссылка на описание</label>
+                    <input type="text" class="form-control" id="webDescriptionLink" placeholder="Ссылка на магазин, описание, ..." ng-model="oneBook.webDescriptionLink">
+                </div>
+                <div class="form-group">
+                    <label for="webDownloadLink">Ссылка на закачку</label>
+                    <input type="text" class="form-control" id="webDownloadLink" placeholder="Ссылка на закачку" ng-model="oneBook.webDownloadLink">
+                </div>
+
             </div>
 
         </div>
